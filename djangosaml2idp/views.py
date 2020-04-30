@@ -56,6 +56,7 @@ def store_params_in_session(request: HttpRequest) -> None:
     request.session['Binding'] = binding
     request.session['SAMLRequest'] = saml_request
     request.session['RelayState'] = passed_data.get('RelayState', '')
+    request.session['jwt'] = passed_data.get('jwt', '')
 
 
 @never_cache
